@@ -1,0 +1,377 @@
+/* ---------- General ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #172033;
+    background: #f5f7fb;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #172554 55%, #1d4ed8);
+    color: white;
+    padding-bottom: 80px;
+}
+
+/* ---------- Navigation ---------- */
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 24px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #dbeafe;
+    font-size: 0.95rem;
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* ---------- Hero ---------- */
+.hero-content {
+    max-width: 1050px;
+    min-height: 75vh;
+    margin: auto;
+    padding: 50px 25px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.profile-photo-wrapper {
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.intro {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #93c5fd;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.intro h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.intro h2 {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #dbeafe;
+    margin-bottom: 20px;
+}
+
+.intro > p:not(.eyebrow) {
+    color: #cbd5e1;
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: white;
+    color: #172554;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* ---------- Sections ---------- */
+.section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.section-heading span {
+    color: #2563eb;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.section-heading h2 {
+    font-size: 2.1rem;
+}
+
+/* ---------- Cards ---------- */
+.card,
+.skill-card,
+.interest-card,
+.contact-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.about-card {
+    padding: 30px;
+}
+
+.about-card p + p {
+    margin-top: 16px;
+}
+
+/* ---------- Education ---------- */
+.timeline {
+    position: relative;
+    padding-left: 28px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #bfdbfe;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -29px;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+    background: #2563eb;
+    border-radius: 50%;
+    border: 3px solid #dbeafe;
+}
+
+.timeline-item .card {
+    padding: 25px;
+}
+
+.date {
+    color: #2563eb;
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.timeline h3 {
+    margin-bottom: 3px;
+}
+
+.institution {
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px;
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.tags span {
+    padding: 7px 12px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* ---------- Interests ---------- */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.interest-card {
+    padding: 25px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.interest-card h3 {
+    margin-bottom: 7px;
+}
+
+/* ---------- Contact ---------- */
+.contact-section {
+    padding-bottom: 110px;
+}
+
+.contact-card {
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-links a {
+    padding: 10px 16px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.contact-links a:hover {
+    background: #dbeafe;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #64748b;
+    background: #e2e8f0;
+    font-size: 0.9rem;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 800px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+        padding-top: 40px;
+    }
+
+    .intro > p:not(.eyebrow) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skills-grid,
+    .interest-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .profile-photo {
+        width: 190px;
+        height: 190px;
+    }
+
+    .section {
+        padding: 65px 18px;
+    }
+
+    .skills-grid,
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+}
